@@ -1,8 +1,12 @@
 /* *********** */
-/* variables */
+/* current year */
 /* *********** */
 const yearEl = document.getElementById('year');
-const projectsEl = document.getElementById('projects');
+yearEl.innerHTML = new Date().getFullYear();
+
+/* *********** */
+/* filters */
+/* *********** */
 const filterEls = document.querySelectorAll('#filters li');
 
 for (let i = 0; i < filterEls.length; i++) {
@@ -14,11 +18,10 @@ for (let i = 0; i < filterEls.length; i++) {
 	});
 }
 
-yearEl.innerHTML = new Date().getFullYear();
-
 /* *********** */
 /* projects */
 /* *********** */
+const projectsEl = document.getElementById('projects');
 const projects = [
 	{
 		name: 'Logos List',
@@ -55,3 +58,30 @@ function renderProjects(tag) {
 }
 
 renderProjects('all');
+
+/* *********** */
+/* social links */
+/* *********** */
+const socialLinksEl = document.getElementById('socialLinks');
+const socialLinks = [
+	{
+		name: GitH,
+	},
+];
+
+function rendersocialLinks(tag) {
+	let output = '';
+	// <img src="img/project/${socialLinks[i].img}" alt="Calculator Project Image">
+
+	for (let i = 0; i < socialLinks.length; i++) {
+		if (tag == 'all' || projects[i].tags.includes(tag)) {
+			output += `<div class="project">
+				s
+			</div> `;
+		}
+	}
+
+	projectsEl.innerHTML = output;
+}
+
+rendersocialLinks('all');
