@@ -65,7 +65,39 @@ renderProjects('all');
 const socialLinksEl = document.getElementById('socialLinks');
 const socialLinks = [
 	{
-		name: GitH,
+		name: 'GitHub',
+		img: 'github.svg',
+		url: '',
+	},
+	{
+		name: 'Telegram',
+		img: 'github.svg',
+		url: '',
+	},
+	{
+		name: 'LinkedIn',
+		img: 'github.svg',
+		url: '',
+	},
+	{
+		name: 'Instagram',
+		img: 'github.svg',
+		url: '',
+	},
+	{
+		name: 'Facebook',
+		img: 'github.svg',
+		url: '',
+	},
+	{
+		name: 'YouTube',
+		img: 'github.svg',
+		url: '',
+	},
+	{
+		name: 'Website',
+		img: 'github.svg',
+		url: '',
 	},
 ];
 
@@ -74,14 +106,12 @@ function rendersocialLinks(tag) {
 	// <img src="img/project/${socialLinks[i].img}" alt="Calculator Project Image">
 
 	for (let i = 0; i < socialLinks.length; i++) {
-		if (tag == 'all' || projects[i].tags.includes(tag)) {
-			output += `<div class="project">
-				s
-			</div> `;
-		}
+		output += `<a href=${socialLinks[0].url} target="_blank">
+			<img src="img/icon/${socialLinks[0].img}" alt="${socialLinks[0].name}">
+		</a>`;
 	}
 
-	projectsEl.innerHTML = output;
+	socialLinksEl.innerHTML = output;
 }
 
 rendersocialLinks('all');
