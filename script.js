@@ -159,13 +159,13 @@ function renderProjects(tag) {
 					background-image: url('img/project/${projects[i].img}');
 				">
 				</div>
-				<div class="content flex">
+				<a class="content flex" href="${projects[i].liveUrl}" target="_blank">
 					<p>${projects[i].name}</p>
 					<p class="flex">
-						<a href="${projects[i].codeUrl}" target="_blank"><img src="img/icon/github.svg" alt="GitHub"></a>
-						<a href="${projects[i].liveUrl}" target="_blank"><img src="img/icon/arrow-up-right-from-square-solid.svg" alt="External link"></a>
+						<img class="figma_icon" src="img/icon/figma.svg" alt="Figma Icon">
+						<img class="external_icon" src="img/icon/arrow-up-right-from-square-solid.svg" alt="External link">
 					</p>
-				</div>
+				</a>
 			</div> `;
 		}
 	}
